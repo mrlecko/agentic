@@ -1,4 +1,4 @@
-# The Hardened Agent: Production-Ready LangChain Demo
+# The Hardened Agent: LangChain Demo
 
 > **"Most LangChain agents loop forever, hallucinate confidently, and crash ungracefully. This one knows when to panic, when to stop, and when to admit it's wrong. That's not smarter. That's wiser. That's survival."**
 
