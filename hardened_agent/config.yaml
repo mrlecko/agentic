@@ -1,0 +1,40 @@
+# Hardened Agent Configuration
+# All thresholds and parameters for production tuning
+
+agent:
+  max_steps: 10
+  token_budget: 1000
+
+critical_states:
+  # PANIC: Low confidence threshold
+  panic_threshold: 0.4
+  
+  # HUBRIS: Over-confidence threshold  
+  hubris_threshold: 0.9
+  
+  # DEADLOCK: Number of repeats to trigger
+  deadlock_window: 3
+  
+  # SCARCITY: Resource usage thresholds (%)
+  scarcity_token_threshold: 0.8
+  scarcity_step_threshold: 0.8
+
+circuit_breaker:
+  # Consecutive alerts before trip
+  consecutive_limit: 3
+  
+  # Total alerts before trip
+  total_limit: 10
+  
+  # Oscillation detection window
+  oscillation_window: 4
+
+observability:
+  # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_level: INFO
+  
+  # Enable Prometheus metrics
+  metrics_enabled: true
+  
+  # Metrics server port (if enabled)
+  metrics_port: 8000
